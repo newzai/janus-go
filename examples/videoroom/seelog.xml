@@ -1,0 +1,13 @@
+<seelog minlevel="trace">
+    <outputs formatid="main">   	
+        <filter levels="info,warn, error,critical">           
+			<rollingfile type="date" filename="./videoroom.txt" datepattern="2006.01.02" maxrolls="7" />
+        </filter>
+		<filter levels="info,warn, error,critical"> 
+			<console />
+		 </filter>
+    </outputs>
+    <formats>
+        <format id="main" format="[%Filename %Line] %Date(2006-01-02T15:04:05.999999999Z07:00) [%LEV] %Msg%n"/>    -->format内容，可以多个共存，只要id不相同。然后上面可以用不同的id来输出不同格式的日志。
+    </formats>
+</seelog>
